@@ -39,14 +39,11 @@
           sumInput += element.price;
       });
 
-      price = sumInput - discount
+      price = sumInput
           return price;
       }
   }
 
-  const checkOrangeSet = (data) = {
-
-  }
 </script>
 
 <template>
