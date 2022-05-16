@@ -13,9 +13,8 @@
           sumInput += element.price;
       });
 
-      const discount_mem = (sumInput * 10)/100
-      const discount_set = (sumInput * 5)/100
-      price = sumInput - (discount_mem + discount_set)
+      const discount = (sumInput * 15)/100
+      price = sumInput - (discount)
           return price;
       }
      else{
@@ -27,8 +26,7 @@
       price = sumInput - discount
           return price;
       }
-     }
-    } if(!isMember) {
+     } if(!isMember) {
       let sumInput = 0
       if(checkset.length){
         const discount_set = (sumInput * 5)/100
@@ -42,8 +40,8 @@
       price = sumInput
           return price;
       }
+     }
   }
-
 </script>
 
 <template>
