@@ -1,7 +1,17 @@
+<script setup>
+  import { RouterLink, RouterView } from "vue-router";
+  import NavBar from "@/components/navBar.vue";
+  import Banner from "@/components/banner.vue";
+  import Detail from "@/components/detail.vue";
+  import Galaxy from "@/components/galaxy.vue";
+  import Footer from "@/components/footer.vue";
+</script>
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <NavBar />
+  <Banner />
+  <Detail />
+  <Galaxy />
+  <Footer />
 </template>
 
 <style>
