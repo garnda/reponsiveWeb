@@ -4,15 +4,14 @@
   import Banner from "@/components/banner.vue";
   import Detail from "@/components/detail.vue";
   import Galaxy from "@/components/galaxy.vue";
-  import Home from "@/views/HomeView.vue";
+  import Footer from "@/components/footer.vue";
 </script>
 
 <template>
-  <!-- <NavBar />
+  <NavBar />
   <Banner />
-  <Detail />
-  <Galaxy /> -->
-  <Home />
+  <RouterView />
+  <Footer />
 </template>
 
 <style>

@@ -4,13 +4,13 @@ import BootstrapVue3 from "bootstrap-vue-3";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue-3/dist/bootstrap-vue-3.css";
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons'
 import VueLoading from "vue-loading-overlay";
 import "vue-loading-overlay/dist/vue-loading.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 
-library.add(faAngleDown)
+library.add(faAngleDown, faEyeSlash, faEye);
 
 import App from "./App.vue";
 import router from "./router";

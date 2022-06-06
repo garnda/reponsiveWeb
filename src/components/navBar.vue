@@ -25,7 +25,7 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarMenu">
+    <div class="collapse navbar-collapse" id="navbarMenu" @click="openNav()">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="#">Explore products</a>
@@ -38,15 +38,22 @@
         </li>
       </ul>
       <div class="navbar-text">
-        <div v-if="!user.isLogin" class="btn" @click="loginUser">Login</div>
-        <div v-else>
+        <!-- <div v-if="!user.isLogin" class="btn" @click="loginUser">Login</div> -->
+        <!-- <div v-else>
           <span class="pr-3" @click="loginUser">Logout</span>
           <img src="@/assets/image/profile.png" alt="profile" class="rounded-circle" />
             <font-awesome-icon class="pl-2" :icon="['fa-solid', 'angle-down']"/>
-        </div>
+        </div> -->
       </div>
     </div>
   </nav>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
   <!-- </header> -->
 </template>
 
@@ -74,4 +81,43 @@
   //     outline: none;
   //     box-shadow: none;
   // }
+
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 </style>
